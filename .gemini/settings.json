@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "github": {
+      "httpUrl": "https://api.githubcopilot.com/mcp/",
+      "trust": true,
+      "headers": {
+        "Authorization": "Bearer $GITHUB_PAT"
+      }
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp", "--api-key", "$CONTEXT7_API_KEY"]
+    },
+    "vercel": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://mcp.vercel.com"]
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "$FIRECRAWL_API_KEY"
+      }
+    }
+  }
+}
